@@ -89,7 +89,7 @@ async def search(news_input:str):
         response.raise_for_status()  # Raise an exception if request fails
         news_data = response.json()
         news_articles = news_data.get("articles","Error occured while procuring data")
-        news_articles = sort(news_articles)
+        news_articles = parse_news_data_to_articles(news_articles)
         return news_articles
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
