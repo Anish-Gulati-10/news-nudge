@@ -13,6 +13,9 @@
 
 .env
 /assets
+/server/__pycache__
+/server/api/__pycache__
+/server/model/__pycache__
 
 # misc
 .DS_Store
