@@ -12,7 +12,7 @@ import { InvalidPage } from "./pages/error";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-color">
       <Router>
         <Navbar />
         <Routes>

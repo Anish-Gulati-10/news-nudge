@@ -1,20 +1,38 @@
 import { FetchNews } from "../utils/fetch_news";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Article } from "../components/article";
 
 export const UsaNews = () => {
-    useEffect(()=>{
-        const fetchData = async () => {
-          try{
-            const data = await FetchNews("usa");
-            console.log(data);
-          } catch (error){
-            console.log(error);
-          }
-        }
-        fetchData();
-      },[])
+  const [articles, setArticles] = useState([]);
 
-    return (
-            <h1>UsaNews</h1>
-    );
-}
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await FetchNews("usa");
+        setArticles(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div className="flex flex-wrap items-stretch gap-y-10 px-2 justify-evenly gap-x-11 py-6">
+      {articles.map((article, index) => {
+        return (
+          <Article
+            key={index}
+            headline={article.headline}
+            img_url={article.img_url}
+            url={article.url}
+            published_at={article.published_at}
+            score={article.score}
+            source={article.source}
+            desc={article.desc}
+          />
+        );
+      })}
+    </div>
+  );
+};

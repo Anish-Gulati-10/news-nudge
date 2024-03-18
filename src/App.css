@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(19, 26, 37, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.h-125 {
+  height: 31.25rem;
+}
+
+.bg-color{
+  background-color: whitesmoke;
+}
