@@ -16,27 +16,27 @@ app.add_middleware(
 )
 
 
-@app.get("/news/finance")
+@app.get("/news/")
 async def get_news():
     return fetch_news("finance")
     
 
-@app.get("/news/finance/india")
+@app.get("/news/india")
 async def get_indian_news():
     return fetch_news("india%20stock%20market")
     
 
-@app.get("/news/finance/usa")
+@app.get("/news/usa")
 async def get_usa_news():
     return fetch_news("usa%20stock%20market")
 
     
 
-@app.get("/news/finance/crypto")
+@app.get("/news/crypto")
 async def get_crypto_news():
     return fetch_news("cryptocurrency")
 
     
-@app.get("/news/search/")
+@app.get("/news/search")
 async def search(news_input:str):
     return fetch_news(news_input)
