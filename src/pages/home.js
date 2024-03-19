@@ -18,7 +18,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap items-stretch gap-y-10 px-2 justify-evenly gap-x-11 py-6">
+    <div className="flex flex-wrap items-stretch gap-y-10 px-2 justify-evenly gap-x-11 py-6 bg-crypto">
       {articles.map((article, index) => {
         return (
           <Article
