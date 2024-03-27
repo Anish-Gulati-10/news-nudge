@@ -13,7 +13,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black my-2 px-6 py-3 text-white flex w-4/5 mx-auto justify-between align-baseline rounded-full">
+    <nav className="bg-black px-6 py-3 text-white flex w-full mx-auto justify-between align-baseline rounded-full">
       <div>
         <ul className="flex justify-between gap-1 py-1 align-baseline">
           <li>
@@ -53,7 +53,7 @@ export const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="self-center">
+      <div className="justify-items-center mr-32">
         <img src={logo} alt="news-nudge" className="size-9" />
       </div>
       <div className="flex justify-between py-1 align-middle">
