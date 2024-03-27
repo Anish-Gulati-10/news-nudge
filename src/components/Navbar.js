@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/icon.svg";
 import { useState } from "react";
+import { useSearchQuery } from "../context/QueryContext";
 
 export const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const { searchQuery, setSearchQuery } = useSearchQuery();
+  const navigate = useNavigate();
 
   const handleSearch = () => {
-        console.log("searching for: ", searchQuery);
+    console.log(searchQuery);
+    navigate(`/search/${searchQuery}`);
   };
 
   return (
@@ -59,11 +62,11 @@ export const Navbar = () => {
           className="px-2 py-0.5 rounded-xl mx-2 text-black"
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button
-          className="px-3 py-0.5 rounded-xl mx-2 bg-color text-black"
-          onClick={handleSearch}>
-          search
-        </button>
+          <button
+            className="px-3 py-0.5 rounded-xl mx-2 bg-color text-black"
+            onClick={handleSearch}>
+            search
+          </button>
       </div>
     </nav>
   );
