@@ -1,7 +1,5 @@
 import './App.css';
-// import "dotenv/config";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Navbar} from "./components/Navbar";
 import { Home } from "./pages/home";
 import { IndiaNews } from "./pages/india_news";
 import { UsaNews } from "./pages/usa_news";
@@ -17,7 +15,6 @@ function App() {
     <div className="App bg-black">
       <Router>
         <QueryProvider>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/india" element={<IndiaNews />} />

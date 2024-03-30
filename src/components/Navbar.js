@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/icon.svg";
-import { useState } from "react";
 import { useSearchQuery } from "../context/QueryContext";
 
 export const Navbar = () => {
