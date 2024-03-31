@@ -18,7 +18,7 @@ app.add_middleware(
 
 @app.get("/news/")
 async def get_news():
-    return fetch_news("finance")
+    return fetch_news("business")
     
 
 @app.get("/news/india")

@@ -1,25 +1,29 @@
 import { useEffect, useState } from "react";
 import { Article } from "../components/article";
 import { SearchNews } from "../utils/search_news";
-import { useSearchQuery } from "../context/QueryContext";
 import { Navbar } from "../components/Navbar";
+import Loader from "../components/loader";
+import { useParams } from "react-router-dom";
 
 export const Search = () => {
-  const [articles, setArticles] = useState([]);
-  const { searchQuery } = useSearchQuery();
+  const [articles, setArticles] = useState(null);
+  const params = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("fetching data");
       try {
-        const data = await SearchNews(searchQuery);
+        const data = await SearchNews(params.query);
         setArticles(data);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [searchQuery]);
+  }, [params]);
+
+  if (!articles) {
+    return <Loader />;    
+  }
 
   return (
     <>

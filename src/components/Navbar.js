@@ -1,13 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/icon.svg";
-import { useSearchQuery } from "../context/QueryContext";
+import { useState } from "react";
 
 export const Navbar = () => {
-  const { searchQuery, setSearchQuery } = useSearchQuery();
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    console.log(searchQuery);
     navigate(`/search/${searchQuery}`);
   };
 
@@ -57,12 +56,12 @@ export const Navbar = () => {
       </div>
       <div className="flex justify-between py-1 align-middle">
         <input
-          placeholder="eg Reliance"
+          placeholder="eg Nifty, Bitcoin, etc."
           className="px-2 py-0.5 rounded-xl mx-2 text-black"
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-          <button
-            className="px-3 py-0.5 rounded-xl mx-2 bg-color text-black"
+        <button
+          className="px-3 py-0.5 rounded-xl mx-2 bg-color text-black"
             onClick={handleSearch}>
             search
           </button>
