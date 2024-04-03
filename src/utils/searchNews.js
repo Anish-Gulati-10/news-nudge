@@ -6,7 +6,6 @@ export const SearchNews = async (news_input) => {
     method: "get",
     maxBodyLength: Infinity,
     url: `${LOCAL_URL}news/search?news_input=${news_input}`,
-    //url: 'http://localhost:8000/news/search?news_input=ambani',
     headers: {},
   };
 

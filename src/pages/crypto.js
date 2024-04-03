@@ -1,4 +1,4 @@
-import { FetchNews } from "../utils/fetch_news";
+import { FetchNews } from "../utils/fetchNews";
 import { useEffect, useState } from "react";
 import { Article } from "../components/article";
 import { Navbar } from "../components/Navbar";

@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
-import { IndiaNews } from "./pages/india_news";
-import { UsaNews } from "./pages/usa_news";
+import { IndiaNews } from "./pages/indiaNews";
+import { UsaNews } from "./pages/usaNews";
 import { Crypto } from "./pages/crypto";
 import { Calendar } from "./pages/calendar";
 import { InvalidPage } from "./pages/error";

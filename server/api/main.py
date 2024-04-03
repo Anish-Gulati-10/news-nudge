@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from utils.fetch_news import fetch_news
+from utils.economic_calendar import get_economic_events
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -40,3 +41,8 @@ async def get_crypto_news():
 @app.get("/news/search")
 async def search(news_input:str):
     return fetch_news(news_input)
+
+@app.get("/economic-calendar/")
+async def calendar():
+    data = get_economic_events()
+    return data

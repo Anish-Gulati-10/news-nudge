@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Article } from "../components/article";
-import { SearchNews } from "../utils/search_news";
+import { SearchNews } from "../utils/searchNews";
 import { Navbar } from "../components/Navbar";
 import Loader from "../components/loader";
 import { useParams } from "react-router-dom";
