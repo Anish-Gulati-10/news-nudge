@@ -18,35 +18,35 @@ export const Navbar = () => {
           <li>
             <Link
               to="/"
-              className="py-1 px-5 rounded-full hover:bg-lime-200 hover:text-black">
+              className="py-1 px-5 rounded-full hover:bg-blue-500 hover:text-black">
               Home
             </Link>
           </li>
           <li>
             <Link
               to="/india"
-              className="py-1 px-5 rounded-full hover:bg-lime-200 hover:text-black">
+              className="py-1 px-5 rounded-full hover:bg-blue-500 hover:text-black">
               India
             </Link>
           </li>
           <li>
             <Link
               to="/usa"
-              className="py-1 px-5 rounded-full hover:bg-lime-200 hover:text-black">
+              className="py-1 px-5 rounded-full hover:bg-blue-500 hover:text-black">
               USA
             </Link>
           </li>
           <li>
             <Link
               to="/crypto"
-              className="py-1 px-5 rounded-full hover:bg-lime-200 hover:text-black">
+              className="py-1 px-5 rounded-full hover:bg-blue-500 hover:text-black">
               Crypto
             </Link>
           </li>
           <li>
             <Link
               to="/calendar"
-              className="py-1 px-5 rounded-full hover:bg-lime-200 hover:text-black">
+              className="py-1 px-5 rounded-full hover:bg-blue-500 hover:text-black">
               Calendar
             </Link>
           </li>
