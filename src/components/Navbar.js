@@ -7,6 +7,7 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
+    if (searchQuery === "") return;
     navigate(`/search/${searchQuery}`);
   };
 
@@ -57,13 +58,13 @@ export const Navbar = () => {
       <div className="flex justify-between py-1 align-middle">
         <input
           placeholder="eg Nifty, Bitcoin, etc."
-          className="px-2 py-0.5 rounded-xl mx-2 text-black"
+          className="px-2 py-1 rounded-2xl mx-2 text-black"
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button
-          className="px-3 py-0.5 rounded-xl mx-2 bg-color text-black"
+          className="px-4 py-1 rounded-2xl mx-2 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition-colors"
             onClick={handleSearch}>
-            search
+            SEARCH
           </button>
       </div>
     </nav>

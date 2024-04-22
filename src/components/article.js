@@ -22,7 +22,7 @@ export const Article = (props) => {
   const { sentiment, textColor, opacity } = getSentimentInfo(props.score);
 
   return (
-    <div className="w-96 h-125 p-2 flex flex-col card text-white gap-5">
+    <div className="w-96 h-[31.25rem] p-2 flex flex-col card text-white gap-5">
       <div
         className="bg-cover bg-center h-96 rounded-xl"
         style={{ backgroundImage: props.img_url ? `url(${props.img_url})` : `url(${backupImg})` }}></div>

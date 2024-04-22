@@ -10,7 +10,7 @@ import { Search } from "./pages/search";
 
 function App() {
   return (
-    <div className="App bg-black">
+    <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
