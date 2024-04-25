@@ -1,11 +1,11 @@
 import axios from "axios";
-import { LOCAL_URL } from "../constants/constants";
+import { BACKEND_URL } from "../constants/constants";
 
 export const EconomicEvents = async () => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${LOCAL_URL}economic-calendar/`,
+    url: `${BACKEND_URL}economic-calendar/`,
     headers: {},
   };
 

@@ -1,11 +1,11 @@
 import axios from "axios";
-import { LOCAL_URL } from "../constants/constants";
+import { BACKEND_URL } from "../constants/constants";
 
 export const SearchNews = async (news_input) => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${LOCAL_URL}news/search?news_input=${news_input}`,
+    url: `${BACKEND_URL}news/search?news_input=${news_input}`,
     headers: {},
   };
 

@@ -1,1 +1,1 @@
-export const LOCAL_URL = "http://192.168.1.2:8000/";
+export const BACKEND_URL = "https://news-nudge-backend.onrender.com/";
