@@ -22,9 +22,9 @@ export const Article = (props) => {
   const { sentiment, textColor, opacity } = getSentimentInfo(props.score);
 
   return (
-    <div className="w-96 h-[31.25rem] p-2 flex flex-col card text-white gap-5">
+    <div className="w-96 h-[31.25rem] p-1.5 flex flex-col text-white gap-5 border border-slate-400 rounded-sm">
       <div
-        className="bg-cover bg-center h-96 rounded-xl"
+        className="bg-cover bg-center h-96 rounded-sm"
         style={{ backgroundImage: props.img_url ? `url(${props.img_url})` : `url(${backupImg})` }}></div>
       <div className="flex justify-between align-center">
         <p>{props.published_at}</p>
@@ -38,7 +38,7 @@ export const Article = (props) => {
       </div>
       <div className="flex justify-between align-center">
         <p className="py-1">{props.source}</p>
-        <a href={props.url} className="py-1 px-3 rounded-2xl bg-white text-black">Read More</a>
+        <a href={props.url} className="py-1 px-4 rounded-sm bg-white text-black">Read More</a>
       </div>
     </div>
   );
